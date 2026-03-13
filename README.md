@@ -49,40 +49,8 @@ This project trains a **Random Forest AI model** to automatically predict optima
 
 ## 🏗️ System Architecture
 
-```
-Wireless Conditions
-(delay · packet loss · noise)
-          │
-          ▼
-    ┌─────────────┐         predicts        ┌─────────────────┐
-    │   AI Model  │ ───────────────────────▶│  Kp · Ki · Kd   │
-    │Random Forest│                         └────────┬────────┘
-    └─────────────┘                                  │
-                                                     ▼
-Reference r ──────────────────────────────▶ ┌───────────────┐
-                                             │ PID Controller│
-                                             └───────┬───────┘
-                                                     │ control signal u
-                                                     ▼
-                                             ┌───────────────┐
-                                             │  DC Motor     │
-                                             │  Plant        │
-                                             └───────┬───────┘
-                                                     │ motor speed ω
-                                                     ▼
-                                             ┌───────────────┐
-                                             │    Sensor     │
-                                             └───────┬───────┘
-                                                     │
-                                                     ▼
-                                        ┌────────────────────────┐
-                                        │   Wireless Channel     │
-                                        │  delay · loss · noise  │
-                                        └────────────┬───────────┘
-                                                     │ degraded measurement
-                                                     ▼
-                                             back to PID controller
-```
+
+![Architecture](results/SA/full_system.png)
 
 ---
 
