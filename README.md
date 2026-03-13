@@ -26,7 +26,7 @@ This project trains a **Random Forest AI model** to automatically predict optima
 
 ## 📊 Results
 
-### App Demo — 150ms Delay, 10% Packet Loss, σ=0.02 Noise
+### App Demo — 110ms Delay, 12% Packet Loss, σ=0.01 Noise
 
 ![App Overview](results/plots/app_overview.png)
 
